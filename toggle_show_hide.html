@@ -1,0 +1,22 @@
+<html>
+
+<head>
+ <title>Alpine basics: show/hide</title>
+</head>
+
+<body>
+ <div x-data='{show:true}'>
+
+  <button @click='show=!show'>Toggle show/hide</button>
+  <h3 x-show='show' x-transition>Show/hide without transition</h3>
+  <h3 x-show='show' x-transition.duration.1000ms>Show/hide with 1 second transtion effect</h3>
+  <h3 x-show='show' x-transition:enter.duration.500ms>Transition on show only (not on hide)</h3>
+  <h3 x-show='show' x-transition:leave.duration.1000ms>Transition on hide only (not on show)</h3>
+
+
+ </div>
+
+ <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</body>
+
+</html>
